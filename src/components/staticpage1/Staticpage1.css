@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f0f4f8;
+}
+
+.header {
+  background-color: #07049B;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #07049B;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav ul li {
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 15px;
+  display: block;
+}
+
+.nav ul li a:hover {
+  background-color: #05036e;
+  transition: background-color 0.3s ease;
+}
+
+.main {
+  padding: 50px;
+  text-align: center;
+  background-image: url('/src/components/images/UNICUM_IMG1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Adjust text color for readability */
+  height: 75vh; /* Set height to 75% of viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h2 {
+  font-size: 2.5em;
+  color: #fff; /* Ensure text is readable on the background image */
+  margin-bottom: 20px;
+}
+
+.main p {
+  font-size: 1.2em;
+  color: #eee; /* Ensure text is readable on the background image */
+  margin-bottom: 30px;
+}
+
+.main .btn {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #07049B;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main .btn:hover {
+  background-color: #05036e;
+}
+
+.services {
+  background-color: #f0f4f8;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.services h2 {
+  font-size: 2.5em;
+  color: #07049B;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services .service {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideIn 1s forwards;
+}
+
+.services .service:nth-child(odd) {
+  animation-delay: 0.3s;
+}
+
+.services .service:nth-child(even) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.services .service div {
+  background-color: #fff;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.services .service div:hover {
+  transform: translateY(-10px);
+}
+
+.services .service h3 {
+  font-size: 1.5em;
+  color: #07049B;
+  margin-bottom: 10px;
+}
+
+.services .service p {
+  font-size: 1em;
+  color: #555;
+}
+
+.footer {
+  background-color: #07049B;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2em;
+  }
+  .nav ul {
+    flex-direction: column;
+  }
+  .nav ul li {
+    margin: 10px 0;
+  }
+  .main {
+    padding: 30px;
+  }
+  .main h2 {
+    font-size: 2em;
+  }
+  .main p {
+    font-size: 1em;
+  }
+  .services .service {
+    flex-direction: column;
+    align-items: center;
+  }
+  .services .service div {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .services .service div:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5em;
+  }
+  .main h2 {
+    font-size: 1.5em;
+  }
+  .main p {
+    font-size: 0.9em;
+  }
+  .services h2 {
+    font-size: 2em;
+  }
+  .services .service div {
+    width: 100%;
+  }
+}

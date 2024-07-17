@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.wrapper {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper2 {
+  position: relative;
+  width: 420px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: black;
+  padding: 20px; 
+  margin-top: 9%;
+}
+
+.form-class {
+  padding-top: 10%;
+}
+
+.form-box.login {
+  width: 100%;
+}
+
+form h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+form .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid #009970;
+  border-radius: 40px;
+  font-size: 16px;
+  padding: 0 20px;
+}
+
+.input-box input::placeholder {
+  color: grey;
+  opacity: 0.7;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: black;
+}
+
+form button {
+  width: 100%;
+  height: 45px;
+  background: #009970;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+  transition: background-color 0.3s ease; 
+}
+
+form button:hover {
+  background-color: #e0e0e0; 
+}
+
+.text-danger {
+  color: red;
+  font-size: 14px;
+}
+
+.error-message {
+  color: white;
+  background-color: #ff4d4f;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
